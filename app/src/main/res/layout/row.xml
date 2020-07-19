@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+    
+    <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Name: "
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/loading"
+                    android:id="@+id/wishlistTitle"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="ID: "
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:id="@+id/wishlistURL"
+                    android:textSize="20sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Spacer view; fills the middle section between text and button to ensure the button is at the far right-->
+    <View
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_weight="1">
+
+    </View>
+
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:text="Delete"
+    >
+
+    </Button>
+
+</LinearLayout>
