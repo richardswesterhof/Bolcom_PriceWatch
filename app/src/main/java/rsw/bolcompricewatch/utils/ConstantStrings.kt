@@ -15,8 +15,8 @@ class ConstantStrings {
         const val wlItemImageUrlName: String = "imageUrl"
         const val wlItemPageUrlName: String = "productPageUrl"
 
-        const val wlEntryFormat: String = "%s: %s"
-        const val wlEntriesDir: String = "storage"
+        const val wlEntryFormat: String = "%s:%s"
+        const val wlEntriesDir: String = ""
         const val wlFileName: String = "wishlists.txt"
     }
 

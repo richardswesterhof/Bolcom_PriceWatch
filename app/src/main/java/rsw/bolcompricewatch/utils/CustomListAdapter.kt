@@ -9,8 +9,8 @@ import android.widget.TextView
 import rsw.bolcompricewatch.R
 
 
-class CustomListAdapter(context: Context, entries: ArrayList<Pair<String, String>>, placeholders: ArrayList<String>):
-        ArrayAdapter<String>(context, R.layout.row, R.id.wishlistTitle, placeholders) {
+class CustomListAdapter(context: Context, entries: ArrayList<Pair<String, String>>):
+        ArrayAdapter<Pair<String, String>>(context, R.layout.row, R.id.wishlistTitle, entries) {
 
     private var ctxt: Context
     private var entries: List<Pair<String, String>>
@@ -24,7 +24,7 @@ class CustomListAdapter(context: Context, entries: ArrayList<Pair<String, String
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-        var row: View
+        val row: View
 
         row = convertView ?: inflater.inflate(R.layout.row, parent, false)
 

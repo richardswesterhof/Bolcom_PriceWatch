@@ -18,9 +18,10 @@ class PriceWatcher(appContext: Context, workerParams: WorkerParameters):
         Worker(appContext, workerParams) {
 
     override fun doWork(): Result {
-        //TODO: retrieve all wishlist ids from local storage
-        var listIds: List<String> = getWishlistIds(ConstantStrings.wlEntriesDir, ConstantStrings.wlFileName)
-        var allWishlistItems = JSONObject()
+        val listIds: List<String> = getWishlistIds(
+            applicationContext.getExternalFilesDir(null).toString() + ConstantStrings.wlEntriesDir,
+            ConstantStrings.wlFileName)
+        val allWishlistItems = JSONObject()
 
 
         for(listId: IndexedValue<String> in listIds.withIndex()) {
